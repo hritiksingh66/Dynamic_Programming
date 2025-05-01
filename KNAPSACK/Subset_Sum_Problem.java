@@ -8,8 +8,6 @@ public class Subset_Sum_Problem{
         for(int i = 0; i < n+1;i++){
             dp[i][0] = true;
         }
-
-        
         System.out.println(subsetSum(arr,sum,n,dp));
     }
 
@@ -23,7 +21,6 @@ public class Subset_Sum_Problem{
                 }
             }
         }
-
         return dp[n][sum];
     }
 }
