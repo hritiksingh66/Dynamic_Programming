@@ -1,10 +1,9 @@
-public class Subset_Sum_Problem{
+public class Subset_Sum_Problem {
     public static void main(String[] args){
         int[] arr ={2,3,7,8,10};
-        int sum = 15;
+        int sum = 11;
         int n = arr.length;
         boolean[][] dp = new boolean[n+1][sum+1];
-
         for(int i = 0; i < n+1;i++){
             dp[i][0] = true;
         }
@@ -12,6 +11,7 @@ public class Subset_Sum_Problem{
     }
 
     public static boolean subsetSum(int[] arr,int sum,int n,boolean[][] dp){
+
         for(int i = 1; i < n+1 ; i++){
             for(int j = 1 ; j < sum + 1; j++){
                 if(arr[i-1] <= j){
