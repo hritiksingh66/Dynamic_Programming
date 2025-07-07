@@ -1,3 +1,5 @@
+package KNAPSACK.Unbounded_KnapSack;
+
 public class Unbounded_KnapSack {
     public static void main(String[] args) {
         int val[] = { 15, 14, 10, 45, 30 };
@@ -10,7 +12,7 @@ public class Unbounded_KnapSack {
             for (int j = 1; j < W + 1; j++) {
                 if (wt[i - 1] <= j) {
                     // Include
-                    int ans1 = dp[i - 1][j - wt[i - 1]] + val[i - 1];
+                    int ans1 = dp[i][j - wt[i - 1]] + val[i - 1];
                     // Exclude
                     int ans2 = dp[i - 1][j];
                     dp[i][j] = Math.max(ans1, ans2);
